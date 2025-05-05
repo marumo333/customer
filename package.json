@@ -10,12 +10,14 @@
   },
   "dependencies": {
     "@mantine/core": "^7.17.7",
+    "@mui/material": "^7.0.2",
     "@prisma/client": "^6.7.0",
     "@radix-ui/react-slot": "^1.2.0",
     "@reduxjs/toolkit": "^2.7.0",
     "@supabase/supabase-js": "^2.49.4",
     "class-variance-authority": "^0.7.1",
     "deepl": "^1.0.13",
+    "lodash": "^4.17.21",
     "next": "15.3.1",
     "qrcode.react": "^4.2.0",
     "react": "^19.0.0",
@@ -29,6 +31,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@types/lodash": "^4.17.16",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

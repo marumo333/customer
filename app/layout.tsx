@@ -17,17 +17,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  
-
   return (
     <html lang="ja">
       <body>
         <Providers>
           <Header>
-        <main className="min-h-screen flex flex-col items-center px-2">
-        <ClientWrapper>{children}</ClientWrapper>
-        </main>
-        </Header>
+            <main className="min-h-screen flex flex-col items-center px-2">
+              <ClientWrapper>{children}</ClientWrapper>
+            </main>
+          </Header>
         </Providers>
       </body>
     </html>

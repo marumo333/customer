@@ -51,6 +51,7 @@ export default function PCComponent({ className }: { className?: string }) {
                  <li><Link href="/logout">ログアウト</Link></li>
                  <li><Link href="/private">商品一覧</Link></li>
                  <li><Link href="/myPage">マイページ</Link></li>
+                 <li><Link href="/search" >商品検索</Link></li>
              </ul>
          </nav>
         ):(
@@ -65,6 +66,7 @@ export default function PCComponent({ className }: { className?: string }) {
             <ul className="hidden md:flex space-x-6 text-blue-900 font-bold">
                 <li><Link href="/private">商品一覧</Link></li>
                 <li><Link href="/myPage">マイページ</Link></li>
+                <li><Link href="/search" >商品検索</Link></li>
             </ul>
         </nav>
         )}

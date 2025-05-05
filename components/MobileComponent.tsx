@@ -72,12 +72,13 @@ export default function MobileComponent({ className }: { className?: string }) {
                                         <Link href="/logout" className="mb-4">ログアウト</Link>
                                         <Link href="/private" className="mb-4">商品一覧</Link>
                                         <Link href="/myPage" className="mb-4">マイページ</Link>
+                                        <Link href="/search" className="mb-4">商品検索</Link>
                                     </div>
                                 </Drawer>
 
                             </div>
                             <Link href="/" className="text-xl font-bold text-white">
-                                Seller
+                                Customer
                             </Link>
                         </div>
                     </div >
@@ -108,6 +109,7 @@ export default function MobileComponent({ className }: { className?: string }) {
                                     <div className="px-4 pt-[78px] font-bold flex flex-col gap-4">
                                         <Link href="/private" className="mb-4">商品一覧</Link>
                                         <Link href="/myPage" className="mb-4">マイページ</Link>
+                                        <Link href="/search" className="mb-4">商品検索</Link>
                                     </div>
                                 </Drawer>
                             </div>

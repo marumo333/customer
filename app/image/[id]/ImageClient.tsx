@@ -7,6 +7,7 @@ import { supabase } from "@/utils/supabase/supabase";
 import QRcode from './QRcode';
 import { useRouter } from 'next/navigation';
 import { useSelector } from "react-redux";
+import LikeSection from "./likeSection"
 
 
 
@@ -218,6 +219,7 @@ export default function ImageClient({ id }: { id: string }) {
           </div>
         </div>
       )}
+      <LikeSection imageId={imageDetail.id} userId={userId} />
       {/* QRコード */}
       <div className="flex justify-center">
         <div className="border p-4 rounded-md shadow-md">

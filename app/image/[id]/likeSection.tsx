@@ -40,7 +40,10 @@ export const LikeSection: React.FC<LikeThread> = ({ imageId, userId }) => {
     }, [userId, imageId])
 
     const handleLikeToggle = async () => {
-        if (!userId) return; // ログインしていない場合は処理しない
+        if (!userId){
+            alert("ログインしてください")
+            return; // ログインしていない場合は処理しない
+        }
 
         setLoading(true);
 

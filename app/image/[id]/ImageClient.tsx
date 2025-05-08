@@ -219,6 +219,7 @@ export default function ImageClient({ id }: { id: string }) {
           </div>
         </div>
       )}
+      {/*Likeボタン*/}
       <LikeSection imageId={imageDetail.id} userId={userId} />
       {/* QRコード */}
       <div className="flex justify-center">

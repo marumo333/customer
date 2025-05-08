@@ -21,7 +21,7 @@ export default function Like({ userId }: Likes) {
             try {
                 const { data, error } = await supabase
                     .from('likes')
-                    .select("image_id,user_id,posts(id,image_url)")
+                    .select("image_id,user_id,shopposts(id,image_url)")
                     .eq('user_id', userId)
                 console.log(data);
                 console.log(error)

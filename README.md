@@ -1,38 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛍️ customer
 
-## Getting Started
+**customer** は、小規模店舗向け商品管理アプリ「[seller](https://seller-weld.vercel.app/)」と連携する、**お客様（顧客）専用の Web アプリケーション**です。
 
-First, run the development server:
+## 🔍 概要
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+QR コードを通じて顧客がスマートフォンから直接商品詳細を確認し、そのままオンラインで閲覧・購入できるシンプルな UI 設計が特徴です。
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+店舗側が `seller` で管理した商品情報を Supabase 経由で取得し、リアルタイムに表示します。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ 主な機能
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- 📱 QR コードから商品ページに直接アクセス
+- 🛒 商品一覧・詳細ページの閲覧
+- 🌐 英語翻訳（DeepL API 連携）
+- 💳 Stripe による決済（クレジットカード対応）
+- 🔐 顧客ログイン（ロールベースで制御）
+- 👍いいね機能の実装(お気に入りの商品のいいねが可能)
+- 😎マイページでのいいねした商品の表示機能
 
-## Learn More
+## 🧩 技術スタック
 
-To learn more about Next.js, take a look at the following resources:
+| 分類         | 技術                         |
+| ------------ | ---------------------------- |
+| フロント     | Next.js, React, TypeScript   |
+| バックエンド | Supabase (DB, Auth, Storage) |
+| 決済         | Stripe                       |
+| 翻訳         | DeepL API                    |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔗 seller との連携
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Supabase の共通テーブル（例: `shopUsers`, `shopposts`）を使用
+- ログインユーザーの `role` が `customer` の場合に本アプリへアクセス可能
+- Row Level Security（RLS）によりデータの読み書きを制限
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# customer
-sellerの商品管理アプリのお客様用のアプリ
+## 📂 ディレクトリ構成（例）

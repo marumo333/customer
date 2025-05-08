@@ -4,6 +4,7 @@ import React from "react";
 import { supabase } from "@/utils/supabase/supabase";
 import { useSelector, useDispatch } from "react-redux";
 import Compressor from "compressorjs";
+import Like from "./likes";
 
 interface Prof {
     id: string,
@@ -241,6 +242,7 @@ export default function Mypage() {
                                 />
                             )}
                         </div>
+                        <Like userId={myprof?.id||""}/>
                     </div>
 
                 </>

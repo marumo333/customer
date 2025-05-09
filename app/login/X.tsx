@@ -53,7 +53,7 @@ export default function X() {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: "twitter",
       options: {
-        redirectTo: `https://seller-weld.vercel.app/redirect`,
+        redirectTo: `https://customer-gamma-one.vercel.app//redirect`,
       },
     });
     if (error) throw new Error(error.message);

@@ -62,7 +62,7 @@ export default function Like({ userId }: Likes) {
               <img
                 src={img.image_url}
                 alt="お気に入りの画像"
-                width="auto"
+                width={200}
                 loading="lazy"
               />
             ) : (

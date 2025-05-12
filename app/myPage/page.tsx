@@ -203,7 +203,7 @@ export default function Mypage() {
                                 </div>
 
                                 <div className="sm:col-span-2">
-                                    <label className="block text-sm font-semibold text-gray-900">Avatar Image</label>
+                                    <label className="block text-sm font-semibold text-gray-900" id="avatar-img">Avatar Image</label>
                                     <div className="mt-2.5">
                                         <input
                                             accept="image/*"

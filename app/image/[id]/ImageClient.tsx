@@ -224,7 +224,7 @@ export default function ImageClient({ id }: { id: string }) {
       {/* QRコード */}
       <div className="flex justify-center">
         <div className="border p-4 rounded-md shadow-md">
-          <QRcode url={`https://seller-weld.vercel.app/image/${encodeURIComponent(imageDetail.id)}`} />
+          <QRcode url={`https://customer-gamma-one.vercel.app/image/${encodeURIComponent(imageDetail.id)}`} />
         </div>
       </div>
     </div>

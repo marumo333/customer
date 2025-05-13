@@ -32,3 +32,6 @@ QR コードを通じて顧客がスマートフォンから直接商品詳細�
 - Supabase の共通テーブル（例: `shopUsers`, `shopposts`）を使用
 - ログインユーザーの `role` が `customer` の場合に本アプリへアクセス可能
 - Row Level Security（RLS）によりデータの読み書きを制限
+
+### Vercelのリンク
+Vercel:[customer(https://customer-gamma-one.vercel.app/)]

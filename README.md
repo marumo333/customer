@@ -34,4 +34,4 @@ QR コードを通じて顧客がスマートフォンから直接商品詳細�
 - Row Level Security（RLS）によりデータの読み書きを制限
 
 ### Vercelのリンク
-Vercel:[customer(https://customer-gamma-one.vercel.app/)]
+Vercel:[customer](https://customer-gamma-one.vercel.app/)

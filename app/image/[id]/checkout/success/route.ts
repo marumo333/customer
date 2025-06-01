@@ -2,9 +2,8 @@ import prisma from "@/libs/prisma";
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
 
-// Stripe初期化
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: "2025-04-30.basil", 
+  apiVersion: "2025-04-30.basil",
 });
 
 export async function POST(request: Request) {
@@ -24,17 +23,28 @@ export async function POST(request: Request) {
       return NextResponse.json({ message: "Session情報にuserIdまたはproductIdがありません" }, { status: 400 });
     }
 
+    // 重複購入防止
+    const existingPurchase = await prisma.purchase.findFirst({
+      where: { userId, productId },
+    });
+
+    if (existingPurchase) {
+      return NextResponse.json({ message: "すでに購入済みです" }, { status: 409 });
+    }
+
     const purchase = await prisma.purchase.create({
-      data: {
-        userId,
-        productId,
-      },
+      data: { userId, productId },
     });
 
     return NextResponse.json({ purchase }, { status: 200 });
 
   } catch (err: any) {
-    console.error("Error in checkout webhook:", err);
+    console.error("Error in checkout complete:", err);
+
+    if (err.type === 'StripeInvalidRequestError') {
+      return NextResponse.json({ message: "Stripeセッションが無効です" }, { status: 400 });
+    }
+
     return NextResponse.json({ message: err.message || "サーバーエラー" }, { status: 500 });
   }
 }

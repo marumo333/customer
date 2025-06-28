@@ -2,7 +2,6 @@
 import { useState, useEffect } from "react";
 import React from "react";
 import { supabase } from "@/utils/supabase/supabase";
-import { useSelector } from "react-redux";
 import Compressor from "compressorjs";
 import Like from "./likes";
 
@@ -23,7 +22,6 @@ export default function Mypage() {
 
     const [file, setFile] = useState<File | null>(null)
     const [error, setError] = useState("")
-    const auth = useSelector((state: any) => state.auth.isSignIn);
     const [userId, setUserId] = useState<string>('');
     const [isClient, setIsClient] = useState(false)
     const [avatarUrl, setAvatarUrl] = useState("")//ログイン情報を保持するステート

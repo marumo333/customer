@@ -3,13 +3,12 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/utils/supabase/supabase";
 import { signIn, signOut } from "./authSlice";
 
 export default function Index() {
-  const auth = useSelector((state: any) => state.auth.isSignIn);
   const dispatch = useDispatch()
   const [user, setUser] = useState("")//ログイン情報を保持するステート
   const router = useRouter();

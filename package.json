@@ -22,8 +22,9 @@
     "class-variance-authority": "^0.7.1",
     "compressorjs": "^1.2.1",
     "deepl": "^1.0.13",
+    "js-cookie": "^3.0.5",
     "lodash": "^4.17.21",
-    "next": "15.3.1",
+    "next": "15.3.5",
     "qrcode.react": "^4.2.0",
     "react": "^19.0.0",
     "react-cookie": "^8.0.1",
@@ -37,6 +38,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@types/js-cookie": "^3.0.6",
     "@types/lodash": "^4.17.16",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -46,5 +48,8 @@
     "prisma": "^6.7.0",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "overrides": {
+    "axios": "^1.6.0"
   }
 }
